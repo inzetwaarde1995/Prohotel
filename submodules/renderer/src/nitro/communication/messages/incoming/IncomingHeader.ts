@@ -128,6 +128,7 @@ export class IncomingHeader
     public static CONVERTED_ROOM_ID = 1331;
     public static GUEST_ROOM_SEARCH_RESULT = 52;
     public static NOTIFICATION_LIST = 1992;
+    public static NOTIFICATION_OFFER_REWARD_DELIVERED = 2125;
     public static NOTIFICATION_SIMPLE_ALERT = 5100;
     public static NOTIFICATION_ELEMENT_POINTER = 1787;
     public static PET_FIGURE_UPDATE = 1924;
@@ -335,6 +336,7 @@ export class IncomingHeader
     public static CAMERA_PUBLISH_STATUS = 2057;
     public static CAMERA_PURCHASE_OK = 2783;
     public static CAMERA_STORAGE_URL = 3696;
+    public static CAMERA_SNAPSHOT = 463;
     public static COMPETITION_STATUS = 133;
     public static INIT_CAMERA = 3878;
     public static THUMBNAIL_STATUS = 3595;
@@ -399,6 +401,7 @@ export class IncomingHeader
     public static POLL_CONTENTS = 2997;
     public static POLL_ERROR = 662;
     public static POLL_OFFER = 3785;
+    public static POLL_START_ROOM = 5200;
     public static QUESTION_ANSWERED = 2589;
     public static QUESTION_FINISHED = 1066;
     public static CFH_PENDING_CALLS = 1121;
@@ -440,6 +443,8 @@ export class IncomingHeader
     public static SHOW_ENFORCE_ROOM_CATEGORY = 3896;
     public static CUSTOM_USER_NOTIFICATION = 909;
     public static NEW_USER_EXPERIENCE_GIFT_OFFER = 3575;
+    public static RESTORE_CLIENT = 426;
+    public static FIREWORK_CHARGE_DATA = 5210;
     public static NEW_USER_EXPERIENCE_NOT_COMPLETE = 3639;
     public static CONNECTION_ERROR = 1004;
     public static ACCOUNT_SAFETY_LOCK_STATUS_CHANGE = 1243;
