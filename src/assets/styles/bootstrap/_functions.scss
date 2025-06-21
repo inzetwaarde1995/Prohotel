@@ -1,4 +1,6 @@
+@use "sass:color";
 @use 'sass:math';
+
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
@@ -230,16 +232,19 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 // See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
 @function luminance($color) {
   $rgb: (
-    "r": red($color),
-    "g": green($color),
-    "b": blue($color),
+    "r": color.channel($color, "red", $space: rgb),
+    "g": color.channel($color, "green", $space: rgb),
+    "b": color.channel($color, "blue", $space: rgb),
   );
 
   @each $name, $value in $rgb {
+    // Scale to [0, 1]
+    $scaled: math.div($value, 255);
+    // Apply sRGB gamma correction
     $value: if(
-      divide($value, 255) < 0.03928,
-      divide(divide($value, 255), 12.92),
-      nth($_luminance-list, $value + 1)
+      $scaled < 0.03928,
+      math.div($scaled, 12.92),
+      math.pow(math.div($scaled + 0.055, 1.055), 2.4)
     );
     $rgb: map-merge(
       $rgb,
@@ -249,6 +254,7 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
     );
   }
 
+  // Return relative luminance
   @return (map-get($rgb, "r") * 0.2126) + (map-get($rgb, "g") * 0.7152) +
     (map-get($rgb, "b") * 0.0722);
 }

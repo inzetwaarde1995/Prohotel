@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .nitro-room-tools-container {
     position: absolute;
     bottom: $toolbar-height + 25px;
@@ -7,9 +9,8 @@
 
     .nitro-room-tools {
         background: #212131;
-        box-shadow: inset 0px 5px lighten(rgba($dark, .6), 2.5), inset 0 -4px darken(rgba($dark, .6), 4);
+        box-shadow: inset 0px 5px color.adjust(rgba($dark, .6), $lightness: 2.5%), inset 0 -4px color.adjust(rgba($dark, .6), $lightness: -4%);
         border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
         transition: all .2s ease;
         z-index: 2;
         margin-left: -20px;
@@ -57,7 +58,7 @@
 
     .nitro-room-history {
         background: #212131;
-        box-shadow: inset 0px 5px lighten(rgba($dark, .6), 2.5), inset 0 -4px darken(rgba($dark, .6), 4);
+        box-shadow: inset 0px 5px color.adjust(rgba($dark, .6), $lightness: 2.5%), inset 0 -4px color.adjust(rgba($dark, .6), $lightness: -4%);
         transition: all .2s ease;
         width: 150px;
         overflow: hidden;
@@ -66,7 +67,7 @@
 
     .nitro-room-tools-info {
         background: #212131;
-        box-shadow: inset 0px 5px lighten(rgba($dark, .6), 2.5), inset 0 -4px darken(rgba($dark, .6), 4);
+        box-shadow: inset 0px 5px color.adjust(rgba($dark, .6), $lightness: 2.5%), inset 0 -4px color.adjust(rgba($dark, .6), $lightness: -4%);
         transition: all .2s ease;
         max-width: 250px;
     }
@@ -86,7 +87,7 @@
     transform: translateX(-50%);
     font-size: large;
     background: rgba($dark, 0.95);
-    box-shadow: inset 0px 5px lighten(rgba($dark, .6), 2.5), inset 0 -4px darken(rgba($dark, .6), 4);
+    box-shadow: inset 0px 5px color.adjust(rgba($dark, .6), $lightness: 2.5%), inset 0 -4px color.adjust(rgba($dark, .6), $lightness: -4%);
     border-radius: $border-radius;
     transition: all 0.2s ease;
     z-index: $quiz-zindex;
@@ -171,7 +172,7 @@
 }
 
 .buildtool-box {
-	background-color: 3D5D63;
+	background-color: #3D5D63;
     align-items: center;
     width: 100%;
     border-radius: 6px;
@@ -266,7 +267,7 @@
 }
 
 .floor-spaceing {
-    gap: 0.6em!important;
+    gap: 0.6em !important;
 }				 
 @import './avatar-info/AvatarInfoWidgetView';
 @import './chat/ChatWidgetView';

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $nitro-card-header-height: 33px;
 $nitro-card-tabs-height: 33px;
 
@@ -119,7 +121,7 @@ $nitro-card-tabs-height: 33px;
             min-height: 28px;
             max-height: 28px;
             background: repeating-linear-gradient($tertiary, $tertiary 50%, $quaternary 50%, $quaternary 100%);
-            border-bottom: 2px solid darken($quaternary, 5);
+            border-bottom: 2px solid color.adjust($quaternary, $lightness: -5%);
             box-shadow: 0 2px white;
             width: 100%;
             margin: 0;

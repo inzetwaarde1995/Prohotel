@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .nitro-use-product-confirmation {
     width: 350px;
 
@@ -37,7 +39,7 @@
         z-index: $infostand-zindex;
         pointer-events: auto;
         background: rgba($dark, .95);
-        box-shadow: inset 0px 5px lighten(rgba($dark, .6), 2.5), inset 0 -4px darken(rgba($dark, .6), 4);
+        box-shadow: inset 0px 5px color.adjust(rgba($dark, .6), $lightness: 2.5%), inset 0 -4px color.adjust(rgba($dark, .6), $lightness: -4%);
 
         .form-control-sm {
             height: 25px;
