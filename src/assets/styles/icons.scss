@@ -210,6 +210,12 @@
         width: 14px;
         height: 14px;
     }
+	
+	&.edit-icon {
+        background-image: url('@/assets/images/infostand/icon_edit.gif');
+        width: 19px;
+        height: 19px;
+    }
 
     &.trade-locked-icon {
         background-image: url('@/assets/images/inventory/trading/locked-icon.png');
