@@ -6,6 +6,7 @@
     font-size: $font-size-sm;
     z-index: $context-menu-zindex;
     pointer-events: all;
+	color: #FFF;
 
     &.bot-chat {
         max-width: 250px;
