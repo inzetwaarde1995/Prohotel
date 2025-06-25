@@ -3,21 +3,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    bottom: 65px;
+    left: calc(100% / 3);
     height: 40px;
-    border-radius: 8px;
-    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    border: 2px solid #000;
+	box-shadow: 0 0 0 1pt #fff!important;
     background: #EDEDED;
-    padding-right: 10px;
-    width: 100%;
+    padding-right: 5px;
+    width: 220px;
     overflow: hidden;
-
-    @include media-breakpoint-down(sm) {
-        display: flex;
-        position: absolute;
-        bottom: 70px;
-        left: calc(100% / 3);
-        width: 200px;
-    }
 
     &:before {
         content: '';
@@ -36,6 +31,7 @@
         display: inline-grid;
         vertical-align: top;
         height: 100%;
+		max-width: calc(100% - 20px);
         padding: 0 10px;
         
         &::after,
