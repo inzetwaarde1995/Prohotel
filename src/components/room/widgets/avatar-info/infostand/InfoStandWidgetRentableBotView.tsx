@@ -36,7 +36,6 @@ export const InfoStandWidgetRentableBotView: FC<InfoStandWidgetRentableBotViewPr
                             <Text variant="white" small wrap>{ avatarInfo.name }</Text>
                             <FaTimes className="cursor-pointer fa-icon" onClick={ onClose } />
                         </Flex>
-                        <hr className="m-0" />
                     </Column>
                     <Column gap={ 1 }>
                         <Flex gap={ 1 }>
@@ -50,13 +49,11 @@ export const InfoStandWidgetRentableBotView: FC<InfoStandWidgetRentableBotViewPr
                                 }) }
                             </Column>
                         </Flex>
-                        <hr className="m-0" />
                     </Column>
                     <Column gap={ 1 }>
                         <Flex alignItems="center" className="bg-light-dark rounded py-1 px-2">
                             <Text fullWidth wrap textBreak variant="white" small className="motto-content">{ avatarInfo.motto }</Text>
                         </Flex>
-                        <hr className="m-0" />
                     </Column>
                     <Column gap={ 1 }>
                         <Flex alignItems="center" gap={ 1 }>
@@ -67,7 +64,6 @@ export const InfoStandWidgetRentableBotView: FC<InfoStandWidgetRentableBotViewPr
                         </Flex>
                         { (avatarInfo.carryItem > 0) &&
                             <>
-                                <hr className="m-0" />
                                 <Text variant="white" small wrap>
                                     { LocalizeText('infostand.text.handitem', [ 'item' ], [ LocalizeText('handitem' + avatarInfo.carryItem) ]) }
                                 </Text>

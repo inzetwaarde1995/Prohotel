@@ -550,9 +550,8 @@ export const InfoStandWidgetFurniView: FC<InfoStandWidgetFurniViewProps> = props
                         <Flex alignItems="center" justifyContent="between" gap={ 1 }>
                             { !(isSongDisk) && <Text variant="white" wrap>{ avatarInfo.name }</Text> }
                             { (songName.length > 0) && <Text variant="white" wrap>{ songName }</Text> }
-                            <i className="infostand-close" onClick={ onClose } />
+							<FaTimes className="cursor-pointer fa-icon" onClick={ onClose } />
                         </Flex>
-                        <hr className="m-0" />
                     </Column>
                     <Column gap={ 1 }>
                         <Flex position="relative" gap={ 1 }>
@@ -567,11 +566,9 @@ export const InfoStandWidgetFurniView: FC<InfoStandWidgetFurniViewProps> = props
                             { avatarInfo.image && avatarInfo.image.src.length &&
                                 <img className="d-block mx-auto" src={ avatarInfo.image.src } alt="" /> }
                         </Flex>
-                        <hr className="m-0" />
-                    </Column>
+                      </Column>
                     <Column gap={ 1 }>
                         <Text fullWidth wrap textBreak variant="white">{ avatarInfo.description }</Text>
-                        <hr className="m-0" />
                     </Column>
                     <Column gap={ 1 }>
                         <Flex alignItems="center" gap={ 1 }>
@@ -589,7 +586,6 @@ export const InfoStandWidgetFurniView: FC<InfoStandWidgetFurniViewProps> = props
                     </Column>
                     { (isJukeBox || isSongDisk) &&
                         <Column gap={ 1 }>
-                            <hr className="m-0" />
                             { (songId === -1) &&
                                 <Text variant="white" small wrap>
                                     { LocalizeText('infostand.jukebox.text.not.playing') }
@@ -612,19 +608,16 @@ export const InfoStandWidgetFurniView: FC<InfoStandWidgetFurniViewProps> = props
                     <Column gap={ 1 }>
                         { isCrackable &&
                             <>
-                                <hr className="m-0" />
                                 <Text variant="white" wrap>{ LocalizeText('infostand.crackable_furni.hits_remaining', [ 'hits', 'target' ], [ crackableHits.toString(), crackableTarget.toString() ]) }</Text>
                             </> }
                         { avatarInfo.groupId > 0 &&
                             <>
-                                <hr className="m-0" />
                                 <Flex pointer alignItems="center" gap={ 2 } onClick={ () => GetGroupInformation(avatarInfo.groupId) }>
                                     <LayoutBadgeImageView badgeCode={ getGroupBadgeCode() } isGroup={ true } />
                                     <Text variant="white" underline>{ groupName }</Text>
                                 </Flex>
                             </> }
 							<>
-								<hr className="m-0" />
 								<Text small wrap variant="white">
 								X = {itemLocation.x}  and  Y = {itemLocation.y}<br />
 								BuildHeight = {itemLocation.z < 0.01 ? 0 : itemLocation.z}<br />
@@ -634,7 +627,6 @@ export const InfoStandWidgetFurniView: FC<InfoStandWidgetFurniViewProps> = props
 							{itemLocation.x > -1}
                         { godMode &&
                             <>
-                                <hr className="m-0" />
                                 { (!avatarInfo.isWallItem && canMove) &&
                                     <>
                                         <Button className="infostand-buttons px-2" onClick={() => setDropdownOpen(!dropdownOpen)}>

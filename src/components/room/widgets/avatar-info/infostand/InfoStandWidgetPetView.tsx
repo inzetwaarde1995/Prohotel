@@ -83,13 +83,11 @@ export const InfoStandWidgetPetView: FC<InfoStandWidgetPetViewProps> = props =>
                             <FaTimes className="cursor-pointer fa-icon" onClick={ onClose } />
                         </Flex>
                         <Text variant="white" small wrap>{ LocalizeText(`pet.breed.${ avatarInfo.petType }.${ avatarInfo.petBreed }`) }</Text>
-                        <hr className="m-0" />
                     </Column>
                     { (avatarInfo.petType === PetType.MONSTERPLANT) &&
                         <>
                             <Column center gap={ 1 }>
                                 <LayoutPetImageView figure={ avatarInfo.petFigure } posture={ avatarInfo.posture } direction={ 4 } />
-                                <hr className="m-0" />
                             </Column>
                             <Column gap={ 2 }>
                                 { !avatarInfo.dead &&
@@ -114,11 +112,9 @@ export const InfoStandWidgetPetView: FC<InfoStandWidgetPetViewProps> = props =>
                                     <Text variant="white" small truncate>{ LocalizeText('infostand.pet.text.raritylevel', [ 'level' ], [ LocalizeText(`infostand.pet.raritylevel.${ avatarInfo.rarityLevel }`) ]) }</Text>
                                     <LayoutRarityLevelView className="top-2 end-2" level={ avatarInfo.rarityLevel } />
                                 </Column>
-                                <hr className="m-0" />
                             </Column>
                             <Column gap={ 1 }>
                                 <Text variant="white" small wrap>{ LocalizeText('pet.age', [ 'age' ], [ avatarInfo.age.toString() ]) }</Text>
-                                <hr className="m-0" />
                             </Column>
                         </> }
                     { (avatarInfo.petType !== PetType.MONSTERPLANT) &&
@@ -159,13 +155,11 @@ export const InfoStandWidgetPetView: FC<InfoStandWidgetPetViewProps> = props =>
                                         </Column>
                                     </Column>
                                 </Flex>
-                                <hr className="m-0" />
                             </Column>
                             <Column gap={ 1 }>
                                 { (avatarInfo.petType !== PetType.MONSTERPLANT) &&
                                     <Text variant="white" small wrap>{ LocalizeText('infostand.text.petrespect', [ 'count' ], [ avatarInfo.respect.toString() ]) }</Text> }
                                 <Text variant="white" small wrap>{ LocalizeText('pet.age', [ 'age' ], [ avatarInfo.age.toString() ]) }</Text>
-                                <hr className="m-0" />
                             </Column>
                         </> }
                     <Column gap={ 1 }>

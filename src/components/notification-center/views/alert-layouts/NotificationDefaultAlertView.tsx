@@ -44,7 +44,6 @@ export const NotificationDefaultAlertView: FC<NotificationDefaultAlertViewProps>
             </Flex>
             { (!item.imageUrl || (item.imageUrl && imageFailed)) && <>
                 <Column alignItems="center" center gap={ 0 }>
-                    <hr className="my-2 w-100" />
                     { !item.clickUrl &&
                         <Button onClick={ onClose }>{ LocalizeText('generic.close') }</Button> }
                     { item.clickUrl && (item.clickUrl.length > 0) && <Button onClick={ visitUrl }>{ LocalizeText(item.clickUrlText) }</Button> }
